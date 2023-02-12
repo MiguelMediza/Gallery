@@ -1,0 +1,56 @@
+a[data-fancybox] img {
+  cursor: zoom-in;
+}
+
+.fancybox__container {
+  --fancybox-bg: rgba(17, 6, 25, 0.85);
+}
+
+.fancybox__container .fancybox__content {
+  /* Create white border around the image */
+  box-sizing: content-box;
+  padding: 1rem;
+  background: #fff;
+
+  border-radius: 6px;
+  color: #374151;
+  box-shadow: 0 8px 23px rgb(0 0 0 / 50%);
+}
+
+.fancybox__caption {
+  max-width: 80%;
+
+  /* Prevent opacity change when dragging up/down */
+  --fancybox-opacity: 1;
+}
+
+
+
+.status-msg{
+    color: red;
+    font-size: 20px;
+}
+.container {
+	width: 80%;
+	column-count: 4;
+	margin: 0 auto;
+}
+
+.grid-item img {
+	width: 100%;
+	height: auto;
+	margin: 1em;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.container {
+		column-count: 3;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.container {
+		column-count: 2;
+	}
+}
