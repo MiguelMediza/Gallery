@@ -8,3 +8,4 @@ Fancybox.bind('[data-fancybox="gallery"]', {
       wheel: "slide",
     },
   });
+
