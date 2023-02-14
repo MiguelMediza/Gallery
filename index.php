@@ -27,7 +27,7 @@ include_once 'upload.php';
         </div >
     </header>
     <body>
-    <div class="container">
+    <div class="upload">
     <div class="upfrm">
         <?php if(!empty($statusMsg)){?>
             <p class="status-msg"> <?php echo $statusMsg;?> </p>
@@ -67,7 +67,7 @@ include_once 'upload.php';
     </script>
 
     
-    <div class="container">  
+    <div class="container galeria-container">  
         <div class="gallery">
             <?php
             // Include database configuration file
@@ -82,7 +82,7 @@ include_once 'upload.php';
                     
             ?>
                 
-            <div class="grid-item"><img data-fancybox="gallery-1" data-caption="<?php echo  $row['file_name'];?>" src="<?php echo $imageURL;?>" alt=""></div >
+            <div class="grid-item"><img class="img" data-fancybox="gallery-1" data-caption="<?php echo  $row['file_name'];?>" src="<?php echo $imageURL;?>" alt=""></div >
         
 
             <?php }
