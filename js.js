@@ -1,5 +1,6 @@
 Fancybox.bind('[data-fancybox="gallery"]', {
-    Thumbs: false,
+    
+  Thumbs: false,
     Toolbar: false,
   
     Image: {
@@ -7,5 +8,6 @@ Fancybox.bind('[data-fancybox="gallery"]', {
       click: false,
       wheel: "slide",
     },
+    
   });
 

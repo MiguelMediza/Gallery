@@ -9,6 +9,8 @@ include_once 'upload.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
 
     <title>Galeria</title>
 
@@ -32,10 +34,12 @@ include_once 'upload.php';
         <?php if(!empty($statusMsg)){?>
             <p class="status-msg"> <?php echo $statusMsg;?> </p>
             <?php } ?>
-            <form id="form"  method="post" enctype="multipart/form-data">
-                Select Image Files to Upload:
-                <input type="file" name="files[]" multiple >
-                <input type="submit" name="submit" value="UPLOAD">
+            <form id="form" class="form" method="post" enctype="multipart/form-data">
+                <div class="form-components">
+                    <h1 class="form-title">Selecciona una imagen:</h1 >
+                    <input class="form-input" type="file" name="files[]" multiple >
+                    <input class="form-submit" type="submit" name="submit" value="UPLOAD">
+                </div >
             </form>
     </div >
     </div >
@@ -66,7 +70,6 @@ include_once 'upload.php';
     });
     </script>
 
-    
     <div class="container galeria-container">  
         <div class="gallery">
             <?php
@@ -82,11 +85,13 @@ include_once 'upload.php';
                     
             ?>
                 
-            <div class="grid-item"><img class="img" data-fancybox="gallery-1" data-caption="<?php echo  $row['file_name'];?>" src="<?php echo $imageURL;?>" alt=""></div >
+            <div class="grid-item"><img class="img" data-fancybox="gallery-1" data-caption="<?php echo  $row['file_name'];?>" src="<?php echo $imageURL;?>" alt="">
+            <a id="delete" href="delete.php?id=<?php echo  $row['id']; ?>" ><i class="fa-solid fa-delete-left delete"></i><a ></div >
         
 
             <?php }
             } ?>
+            
         </div>
     </div>
 </div>
